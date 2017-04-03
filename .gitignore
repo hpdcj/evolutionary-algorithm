@@ -1,0 +1,46 @@
+*.class
+.class
+
+.properties
+
+.idea
+*.iml
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+!/gradle/**/*.jar
+
+.jar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# NetBeans build, dist and local dirs
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Eclipse configuration and build output
+.project
+.classpath
+/.settings/
+/bin/
+/MigrationStrategiesEvaluator/build/
+/MigrationStrategiesEvaluator/dist/
+/test/dist/
+/GeneticAlgorithm/dist/
+/C_Elegans_Java/dist/
+CElegansGenetic/vectors/
+C_Elegans_Java/Solver.m
+C_Elegans_Java/Solver2.m
+mathematica/Solver2.m
+mathematica/v2/.DS_Store
+!/libs/*/*.jar
