@@ -17,13 +17,7 @@ public interface DifferentialEvaluator {
         final double cost1 = first[0];
         final double cost2 = second[0];
 
-        if (Math.abs(cost1 - cost2) < 1e-6) {
-            return 0;
-        } else if (cost1 < cost2) {
-            return -1;
-        } else {
-            return 1;
-        }
+        return Double.compare(cost1, cost2);
     }
 
     public double f(double[] args);

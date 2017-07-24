@@ -93,7 +93,7 @@ public abstract class EvolutionaryAlgorithm {
         int bestIdx = 0;
 
         for (int i = 1; i < vectors.length; i++) {
-            if (evaluator.evaluateVectors(vectors[i], vectors[bestIdx]) == -1) {
+            if (evaluator.evaluateVectors(vectors[i], vectors[bestIdx]) < 0) {
                 bestIdx = i;
             }
         }

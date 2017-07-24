@@ -47,7 +47,7 @@ public class DifferentialEvolution extends EvolutionaryAlgorithm {
             vectorInit.boundVector(trialVector);
             trialVector[0] = evaluator.f(trialVector);
             
-            if (evaluator.evaluateVectors(trialVector, currentVector) == -1) {
+            if (evaluator.evaluateVectors(trialVector, currentVector) < 0) {
                 vectors[i] = trialVector;
             }
 

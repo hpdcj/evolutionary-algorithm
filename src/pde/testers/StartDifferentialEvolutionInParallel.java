@@ -20,17 +20,17 @@ class ParallelTest extends ParallelNonBlockingMigration {
     @Override
     public void performInit() {
 
-        DifferentialEvaluator evaluator = new MinRosenbrockSaddle(800);
+        DifferentialEvaluator evaluator = new MinRosenbrockSaddle(40_000);
         RandomVectorInitPolicy vectors = new RandomVectorInitPolicy(System.currentTimeMillis(), 2);
-        vectors.setMinMax(-2.048, 2.048);
+        vectors.setMinMax(-20, 20);
 
-        this.configureWithEvolutionaryAlgorithm(new DifferentialEvolution(200, 2, 0.8, 0.9, vectors, evaluator));
+        this.configureWithEvolutionaryAlgorithm(new DifferentialEvolution(300, 2, 0.8, 0.9, vectors, evaluator));
 
     }
 
     @Override
     public void showResult() {
-        System.out.println(ea.getOptimalVector()[0] + " " + ea.getOptimalVector()[1]);
+        System.out.println(ea.getOptimalVector()[1] + " " + ea.getOptimalVector()[2]);
     }
 
 }
